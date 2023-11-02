@@ -2988,3 +2988,23 @@ PyIter_Send(PyObject *iter, PyObject *arg, PyObject **result)
     }
     return PYGEN_ERROR;
 }
+
+
+PyObject *
+PyNumber_SpongeBob(PyObject *v, PyObject *w)
+{
+    PyObject *result = BINARY_OP1(v, w, NB_SLOT(nb_spongebob), "///");
+    if (result == Py_NotImplemented) {
+        PySequenceMethods *mv = Py_TYPE(v)->tp_as_sequence;
+        PySequenceMethods *mw = Py_TYPE(w)->tp_as_sequence;
+        Py_DECREF(result);
+        if  (mv && mv->sq_repeat) {
+            return sequence_repeat(mv->sq_repeat, v, w);
+        }
+        else if (mw && mw->sq_repeat) {
+            return sequence_repeat(mw->sq_repeat, w, v);
+        }
+        result = binop_type_error(v, w, "*");
+    }
+    return result;
+}

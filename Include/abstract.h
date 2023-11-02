@@ -201,6 +201,8 @@ PyAPI_FUNC(PyObject *) PyObject_CallNoArgs(PyObject *func);
 PyAPI_FUNC(PyObject *) PyObject_Call(PyObject *callable,
                                      PyObject *args, PyObject *kwargs);
 
+PyAPI_FUNC(PyObject *) PyNumber_SpongeBob(PyObject *o1, PyObject *o2);
+
 
 /* Call a callable Python object 'callable', with arguments given by the
    tuple 'args'.  If no arguments are needed, then 'args' can be NULL.

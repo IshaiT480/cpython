@@ -1117,6 +1117,7 @@ tok_get_normal_mode(struct tok_state *tok, tokenizer_mode* current_tok, struct t
             int c3 = tok_nextc(tok);
             int current_token3 = _PyToken_ThreeChars(c, c2, c3);
             if (current_token3 != OP) {
+                printf("Hello\n");
                 current_token = current_token3;
             }
             else {

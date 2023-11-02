@@ -59,6 +59,8 @@ typedef struct {
 
     binaryfunc nb_matrix_multiply;
     binaryfunc nb_inplace_matrix_multiply;
+
+    binaryfunc nb_spongebob;
 } PyNumberMethods;
 
 typedef struct {

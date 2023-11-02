@@ -61,6 +61,7 @@ const char * const _PyParser_TokenNames[] = {
     "ELLIPSIS",
     "COLONEQUAL",
     "EXCLAMATION",
+    "SPONGEBOB",
     "OP",
     "TYPE_IGNORE",
     "TYPE_COMMENT",
@@ -219,6 +220,7 @@ _PyToken_ThreeChars(int c1, int c2, int c3)
         switch (c2) {
         case '/':
             switch (c3) {
+            case '/': {printf("SPONGEBOB\n"); return SPONGEBOB;}
             case '=': return DOUBLESLASHEQUAL;
             }
             break;

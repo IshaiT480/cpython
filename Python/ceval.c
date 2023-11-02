@@ -333,6 +333,7 @@ const binaryfunc _PyEval_BinaryOps[] = {
     [NB_INPLACE_SUBTRACT] = PyNumber_InPlaceSubtract,
     [NB_INPLACE_TRUE_DIVIDE] = PyNumber_InPlaceTrueDivide,
     [NB_INPLACE_XOR] = PyNumber_InPlaceXor,
+    [NB_SPONGEBOB] = PyNumber_SpongeBob,
 };
 
 

@@ -36,6 +36,8 @@ extern "C" {
 
 #define NB_OPARG_LAST                           25
 
+#define NB_SPONGEBOB                            26
+
 #ifdef __cplusplus
 }
 #endif
